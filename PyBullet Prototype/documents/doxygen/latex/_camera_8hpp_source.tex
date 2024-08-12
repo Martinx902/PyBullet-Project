@@ -1,0 +1,48 @@
+\doxysection{Camera.\+hpp}
+\hypertarget{_camera_8hpp_source}{}\label{_camera_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}Entity.hpp"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <Camera.hpp>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_mgine3_d}{Mgine3D}}}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_mgine3_d_1_1_camera}{Camera}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_mgine3_d_1_1_entity}{Entity}}}
+\DoxyCodeLine{00019\ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ std::shared\_ptr<glt::Camera>\ camera;\ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ glt::Vector3\ position;\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ glt::Vector3\ rotation;\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ movement\_speed;\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ rotation\_speed;\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_mgine3_d_1_1_camera_ab0f3738ec0ac2d878ef9e969ab981a03}{Camera}}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ (}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_mgine3_d_1_1_scene}{Scene}}*\ \mbox{\hyperlink{class_mgine3_d_1_1_entity_a6cf9c65cd8ccc0b1e6f67c0f36146cda}{scene}},}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ fov,}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ near,}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ far,}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ aspect\_ratio,}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ given\_movement\_speed,}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ given\_rotation\_speed,}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ glt::Vector3\ starting\_position,}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ glt::Vector3\ starting\_rotation}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mgine3_d_1_1_camera_a8058727c1065e17dc7d29c35fceda80e}{update}}(\textcolor{keywordtype}{float}\ delta\_time)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ process\_movement(\textcolor{keywordtype}{float}\&\ pos\_y,\ \textcolor{keywordtype}{float}\&\ pos\_x,\ \textcolor{keywordtype}{float}\&\ pos\_z);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ process\_rotation(\textcolor{keywordtype}{float}\&\ rot\_x,\ \textcolor{keywordtype}{float}\&\ rot\_y);}
+\DoxyCodeLine{00081\ \ \ \ \ \};}
+\DoxyCodeLine{00082\ \}}
+
+\end{DoxyCode}

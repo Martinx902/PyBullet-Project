@@ -1,0 +1,109 @@
+\doxysection{Mgine3D\+::Entity Class Reference}
+\hypertarget{class_mgine3_d_1_1_entity}{}\label{class_mgine3_d_1_1_entity}\index{Mgine3D::Entity@{Mgine3D::Entity}}
+
+
+Represents an \doxylink{class_mgine3_d_1_1_entity}{Entity} in the scene, an actor that can be rendered and have behaviors.  
+
+
+
+
+{\ttfamily \#include $<$Entity.\+hpp$>$}
+
+Inheritance diagram for Mgine3D\+::Entity\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.300813cm]{class_mgine3_d_1_1_entity}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mgine3_d_1_1_entity_a2075b8be589514975ef1a29ab7c96fda}{Entity}} (\mbox{\hyperlink{class_mgine3_d_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*}given\+\_\+scene)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_mgine3_d_1_1_entity}{Entity} class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_mgine3_d_1_1_entity_a20796bbe0206e7578749ebebf9302a48}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Virtual function to initialize the entity. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_mgine3_d_1_1_entity_a8d3a917a38e52c586722f8939eef17e8}{update}} (float delta\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Virtual function to update the entity. \end{DoxyCompactList}\item 
+\Hypertarget{class_mgine3_d_1_1_entity_a60e98b5a2dc7f965f886164da3407205}\label{class_mgine3_d_1_1_entity_a60e98b5a2dc7f965f886164da3407205} 
+virtual void {\bfseries render} ()
+\begin{DoxyCompactList}\small\item\em Virtual function to render the entity. It has a base render given that its mostly the same code for everything. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_mgine3_d_1_1_entity_a6cf9c65cd8ccc0b1e6f67c0f36146cda}\label{class_mgine3_d_1_1_entity_a6cf9c65cd8ccc0b1e6f67c0f36146cda} 
+\mbox{\hyperlink{class_mgine3_d_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*} {\bfseries scene}
+\begin{DoxyCompactList}\small\item\em Pointer to the parent scene. \end{DoxyCompactList}\item 
+\Hypertarget{class_mgine3_d_1_1_entity_a2130db2befe6fc85f1a2f50257eba712}\label{class_mgine3_d_1_1_entity_a2130db2befe6fc85f1a2f50257eba712} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ glt\+::\+Node $>$ $>$ {\bfseries models}
+\begin{DoxyCompactList}\small\item\em Vector of Open\+GL Toolkit models associated with the entity. \end{DoxyCompactList}\item 
+\Hypertarget{class_mgine3_d_1_1_entity_aa0bd651bf0ff248430c8135ca101cff5}\label{class_mgine3_d_1_1_entity_aa0bd651bf0ff248430c8135ca101cff5} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ bt\+Rigid\+Body $>$ $>$ {\bfseries rigid\+Bodies}
+\begin{DoxyCompactList}\small\item\em Vector of \doxylink{class_mgine3_d_1_1_bullet}{Bullet} rigid bodies associated with the entity. \end{DoxyCompactList}\item 
+\Hypertarget{class_mgine3_d_1_1_entity_a2c938a1abc70e9e6db8ac0c1dba1a1a6}\label{class_mgine3_d_1_1_entity_a2c938a1abc70e9e6db8ac0c1dba1a1a6} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ bt\+Default\+Motion\+State $>$ $>$ {\bfseries motion\+States}
+\begin{DoxyCompactList}\small\item\em Vector of motion states associated with the entity. \end{DoxyCompactList}\item 
+\Hypertarget{class_mgine3_d_1_1_entity_a589196d81af58f245285aa626fb613a9}\label{class_mgine3_d_1_1_entity_a589196d81af58f245285aa626fb613a9} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ bt\+Collision\+Shape $>$ $>$ {\bfseries collision\+Shapes}
+\begin{DoxyCompactList}\small\item\em Vector of collision shapes associated with the entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an \doxylink{class_mgine3_d_1_1_entity}{Entity} in the scene, an actor that can be rendered and have behaviors. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_mgine3_d_1_1_entity_a2075b8be589514975ef1a29ab7c96fda}\label{class_mgine3_d_1_1_entity_a2075b8be589514975ef1a29ab7c96fda} 
+\index{Mgine3D::Entity@{Mgine3D::Entity}!Entity@{Entity}}
+\index{Entity@{Entity}!Mgine3D::Entity@{Mgine3D::Entity}}
+\doxysubsubsection{\texorpdfstring{Entity()}{Entity()}}
+{\footnotesize\ttfamily Mgine3\+D\+::\+Entity\+::\+Entity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mgine3_d_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*}}]{given\+\_\+scene }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for the \doxylink{class_mgine3_d_1_1_entity}{Entity} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em given\+\_\+scene} & Pointer to the parent scene. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_mgine3_d_1_1_entity_a20796bbe0206e7578749ebebf9302a48}\label{class_mgine3_d_1_1_entity_a20796bbe0206e7578749ebebf9302a48} 
+\index{Mgine3D::Entity@{Mgine3D::Entity}!initialize@{initialize}}
+\index{initialize@{initialize}!Mgine3D::Entity@{Mgine3D::Entity}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily virtual void Mgine3\+D\+::\+Entity\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Virtual function to initialize the entity. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_mgine3_d_1_1_door_a0a76c4a38504c4afd47c18e1be3999b0}{Mgine3\+D\+::\+Door}}, \mbox{\hyperlink{class_mgine3_d_1_1_key_aec5f0380b1bfae3b1924c20fa55e6ce5}{Mgine3\+D\+::\+Key}}, \mbox{\hyperlink{class_mgine3_d_1_1_platform_a93b9669bf318effca9f408422adda8cc}{Mgine3\+D\+::\+Platform}}, \mbox{\hyperlink{class_mgine3_d_1_1_tank_ab91b0e15ddfba00e32c092207d37edd7}{Mgine3\+D\+::\+Tank}}, and \mbox{\hyperlink{class_mgine3_d_1_1_terrain_ac73d296cb39bcd66b079c5a47670ab27}{Mgine3\+D\+::\+Terrain}}.
+
+\Hypertarget{class_mgine3_d_1_1_entity_a8d3a917a38e52c586722f8939eef17e8}\label{class_mgine3_d_1_1_entity_a8d3a917a38e52c586722f8939eef17e8} 
+\index{Mgine3D::Entity@{Mgine3D::Entity}!update@{update}}
+\index{update@{update}!Mgine3D::Entity@{Mgine3D::Entity}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void Mgine3\+D\+::\+Entity\+::update (\begin{DoxyParamCaption}\item[{float}]{delta\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Virtual function to update the entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+\_\+time} & Time elapsed since the last update. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_mgine3_d_1_1_bullet_a3ed38da8138e1c639d6853e46b165276}{Mgine3\+D\+::\+Bullet}}, \mbox{\hyperlink{class_mgine3_d_1_1_camera_a8058727c1065e17dc7d29c35fceda80e}{Mgine3\+D\+::\+Camera}}, \mbox{\hyperlink{class_mgine3_d_1_1_door_aba1a1b21455aee72d932f573f9f371a8}{Mgine3\+D\+::\+Door}}, \mbox{\hyperlink{class_mgine3_d_1_1_platform_a594e495ca4bc9eb62cf818d64c5436e1}{Mgine3\+D\+::\+Platform}}, and \mbox{\hyperlink{class_mgine3_d_1_1_tank_a6bf9fbc70c5ab053591c191ce3a5ced1}{Mgine3\+D\+::\+Tank}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Entity.\+hpp\end{DoxyCompactItemize}

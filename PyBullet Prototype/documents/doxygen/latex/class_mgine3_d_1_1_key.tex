@@ -1,0 +1,113 @@
+\doxysection{Mgine3D\+::Key Class Reference}
+\hypertarget{class_mgine3_d_1_1_key}{}\label{class_mgine3_d_1_1_key}\index{Mgine3D::Key@{Mgine3D::Key}}
+
+
+Represents a \doxylink{class_mgine3_d_1_1_key}{Key} entity in the scene, inheriting from \doxylink{class_mgine3_d_1_1_entity}{Entity} and \doxylink{class_mgine3_d_1_1_message___listener}{Message\+\_\+\+Listener}.  
+
+
+
+
+{\ttfamily \#include $<$Key.\+hpp$>$}
+
+Inheritance diagram for Mgine3D\+::Key\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_mgine3_d_1_1_key}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mgine3_d_1_1_key_a5c979dc0b2bc54d72187a2d7e7d94288}{Key}} (\mbox{\hyperlink{class_mgine3_d_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*}given\+\_\+scene, bt\+Vector3 given\+\_\+position)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_mgine3_d_1_1_key}{Key} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mgine3_d_1_1_key_aec5f0380b1bfae3b1924c20fa55e6ce5}{initialize}} () override
+\begin{DoxyCompactList}\small\item\em Initializes the key, setting up its configurations and visuals. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mgine3_d_1_1_key_a72189a28344d8bb2ee3e7c3e820b1d6d}{handle}} (const \mbox{\hyperlink{struct_mgine3_d_1_1_message}{Message}} \&message) override
+\begin{DoxyCompactList}\small\item\em When it interacts with the tank it sends a message to deactivate the collisions and visuals of the key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_mgine3_d_1_1_entity}{Mgine3\+D\+::\+Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mgine3_d_1_1_entity_a2075b8be589514975ef1a29ab7c96fda}{Entity}} (\mbox{\hyperlink{class_mgine3_d_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*}given\+\_\+scene)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_mgine3_d_1_1_entity}{Entity} class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_mgine3_d_1_1_entity_a8d3a917a38e52c586722f8939eef17e8}{update}} (float delta\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Virtual function to update the entity. \end{DoxyCompactList}\item 
+virtual void {\bfseries render} ()
+\begin{DoxyCompactList}\small\item\em Virtual function to render the entity. It has a base render given that its mostly the same code for everything. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_mgine3_d_1_1_entity}{Mgine3\+D\+::\+Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mgine3_d_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*} {\bfseries scene}
+\begin{DoxyCompactList}\small\item\em Pointer to the parent scene. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ glt\+::\+Node $>$ $>$ {\bfseries models}
+\begin{DoxyCompactList}\small\item\em Vector of Open\+GL Toolkit models associated with the entity. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ bt\+Rigid\+Body $>$ $>$ {\bfseries rigid\+Bodies}
+\begin{DoxyCompactList}\small\item\em Vector of \doxylink{class_mgine3_d_1_1_bullet}{Bullet} rigid bodies associated with the entity. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ bt\+Default\+Motion\+State $>$ $>$ {\bfseries motion\+States}
+\begin{DoxyCompactList}\small\item\em Vector of motion states associated with the entity. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ bt\+Collision\+Shape $>$ $>$ {\bfseries collision\+Shapes}
+\begin{DoxyCompactList}\small\item\em Vector of collision shapes associated with the entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a \doxylink{class_mgine3_d_1_1_key}{Key} entity in the scene, inheriting from \doxylink{class_mgine3_d_1_1_entity}{Entity} and \doxylink{class_mgine3_d_1_1_message___listener}{Message\+\_\+\+Listener}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_mgine3_d_1_1_key_a5c979dc0b2bc54d72187a2d7e7d94288}\label{class_mgine3_d_1_1_key_a5c979dc0b2bc54d72187a2d7e7d94288} 
+\index{Mgine3D::Key@{Mgine3D::Key}!Key@{Key}}
+\index{Key@{Key}!Mgine3D::Key@{Mgine3D::Key}}
+\doxysubsubsection{\texorpdfstring{Key()}{Key()}}
+{\footnotesize\ttfamily Mgine3\+D\+::\+Key\+::\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mgine3_d_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*}}]{given\+\_\+scene,  }\item[{bt\+Vector3}]{given\+\_\+position }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_mgine3_d_1_1_key}{Key} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em given\+\_\+scene} & Pointer to the parent scene. \\
+\hline
+{\em given\+\_\+position} & Position of the key in the scene. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_mgine3_d_1_1_key_a72189a28344d8bb2ee3e7c3e820b1d6d}\label{class_mgine3_d_1_1_key_a72189a28344d8bb2ee3e7c3e820b1d6d} 
+\index{Mgine3D::Key@{Mgine3D::Key}!handle@{handle}}
+\index{handle@{handle}!Mgine3D::Key@{Mgine3D::Key}}
+\doxysubsubsection{\texorpdfstring{handle()}{handle()}}
+{\footnotesize\ttfamily void Mgine3\+D\+::\+Key\+::handle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_mgine3_d_1_1_message}{Message}} \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+When it interacts with the tank it sends a message to deactivate the collisions and visuals of the key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message to handle. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_mgine3_d_1_1_message___listener_a5745115b5b86d371ca66302094f4e12f}{Mgine3\+D\+::\+Message\+\_\+\+Listener}}.
+
+\Hypertarget{class_mgine3_d_1_1_key_aec5f0380b1bfae3b1924c20fa55e6ce5}\label{class_mgine3_d_1_1_key_aec5f0380b1bfae3b1924c20fa55e6ce5} 
+\index{Mgine3D::Key@{Mgine3D::Key}!initialize@{initialize}}
+\index{initialize@{initialize}!Mgine3D::Key@{Mgine3D::Key}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void Mgine3\+D\+::\+Key\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initializes the key, setting up its configurations and visuals. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_mgine3_d_1_1_entity_a20796bbe0206e7578749ebebf9302a48}{Mgine3\+D\+::\+Entity}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Key.\+hpp\end{DoxyCompactItemize}

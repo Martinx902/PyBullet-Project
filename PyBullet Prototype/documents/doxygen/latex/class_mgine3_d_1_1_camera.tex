@@ -1,0 +1,111 @@
+\doxysection{Mgine3D\+::Camera Class Reference}
+\hypertarget{class_mgine3_d_1_1_camera}{}\label{class_mgine3_d_1_1_camera}\index{Mgine3D::Camera@{Mgine3D::Camera}}
+
+
+Represents a \doxylink{class_mgine3_d_1_1_camera}{Camera} entity in the scene, inheriting from \doxylink{class_mgine3_d_1_1_entity}{Entity}.  
+
+
+
+
+{\ttfamily \#include $<$Camera.\+hpp$>$}
+
+Inheritance diagram for Mgine3D\+::Camera\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_mgine3_d_1_1_camera}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mgine3_d_1_1_camera_ab0f3738ec0ac2d878ef9e969ab981a03}{Camera}} (\mbox{\hyperlink{class_mgine3_d_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_mgine3_d_1_1_entity_a6cf9c65cd8ccc0b1e6f67c0f36146cda}{scene}}, float fov, float near, float far, float aspect\+\_\+ratio, float given\+\_\+movement\+\_\+speed, float given\+\_\+rotation\+\_\+speed, glt\+::\+Vector3 starting\+\_\+position, glt\+::\+Vector3 starting\+\_\+rotation)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_mgine3_d_1_1_camera}{Camera} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mgine3_d_1_1_camera_a8058727c1065e17dc7d29c35fceda80e}{update}} (float delta\+\_\+time) override
+\begin{DoxyCompactList}\small\item\em Updates the camera\textquotesingle{}s position and rotation based on the elapsed time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_mgine3_d_1_1_entity}{Mgine3\+D\+::\+Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mgine3_d_1_1_entity_a2075b8be589514975ef1a29ab7c96fda}{Entity}} (\mbox{\hyperlink{class_mgine3_d_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*}given\+\_\+scene)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_mgine3_d_1_1_entity}{Entity} class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_mgine3_d_1_1_entity_a20796bbe0206e7578749ebebf9302a48}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Virtual function to initialize the entity. \end{DoxyCompactList}\item 
+virtual void {\bfseries render} ()
+\begin{DoxyCompactList}\small\item\em Virtual function to render the entity. It has a base render given that its mostly the same code for everything. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_mgine3_d_1_1_entity}{Mgine3\+D\+::\+Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mgine3_d_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*} {\bfseries scene}
+\begin{DoxyCompactList}\small\item\em Pointer to the parent scene. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ glt\+::\+Node $>$ $>$ {\bfseries models}
+\begin{DoxyCompactList}\small\item\em Vector of Open\+GL Toolkit models associated with the entity. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ bt\+Rigid\+Body $>$ $>$ {\bfseries rigid\+Bodies}
+\begin{DoxyCompactList}\small\item\em Vector of \doxylink{class_mgine3_d_1_1_bullet}{Bullet} rigid bodies associated with the entity. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ bt\+Default\+Motion\+State $>$ $>$ {\bfseries motion\+States}
+\begin{DoxyCompactList}\small\item\em Vector of motion states associated with the entity. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ bt\+Collision\+Shape $>$ $>$ {\bfseries collision\+Shapes}
+\begin{DoxyCompactList}\small\item\em Vector of collision shapes associated with the entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a \doxylink{class_mgine3_d_1_1_camera}{Camera} entity in the scene, inheriting from \doxylink{class_mgine3_d_1_1_entity}{Entity}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_mgine3_d_1_1_camera_ab0f3738ec0ac2d878ef9e969ab981a03}\label{class_mgine3_d_1_1_camera_ab0f3738ec0ac2d878ef9e969ab981a03} 
+\index{Mgine3D::Camera@{Mgine3D::Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Mgine3D::Camera@{Mgine3D::Camera}}
+\doxysubsubsection{\texorpdfstring{Camera()}{Camera()}}
+{\footnotesize\ttfamily Mgine3\+D\+::\+Camera\+::\+Camera (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mgine3_d_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*}}]{scene,  }\item[{float}]{fov,  }\item[{float}]{near,  }\item[{float}]{far,  }\item[{float}]{aspect\+\_\+ratio,  }\item[{float}]{given\+\_\+movement\+\_\+speed,  }\item[{float}]{given\+\_\+rotation\+\_\+speed,  }\item[{glt\+::\+Vector3}]{starting\+\_\+position,  }\item[{glt\+::\+Vector3}]{starting\+\_\+rotation }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_mgine3_d_1_1_camera}{Camera} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene} & Pointer to the parent scene. \\
+\hline
+{\em fov} & Field of view for the camera. \\
+\hline
+{\em near} & Near clipping plane. \\
+\hline
+{\em far} & Far clipping plane. \\
+\hline
+{\em aspect\+\_\+ratio} & Aspect ratio of the camera. \\
+\hline
+{\em given\+\_\+movement\+\_\+speed} & Movement speed of the camera. \\
+\hline
+{\em given\+\_\+rotation\+\_\+speed} & Rotation speed of the camera. \\
+\hline
+{\em starting\+\_\+position} & Initial position of the camera. \\
+\hline
+{\em starting\+\_\+rotation} & Initial rotation of the camera. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_mgine3_d_1_1_camera_a8058727c1065e17dc7d29c35fceda80e}\label{class_mgine3_d_1_1_camera_a8058727c1065e17dc7d29c35fceda80e} 
+\index{Mgine3D::Camera@{Mgine3D::Camera}!update@{update}}
+\index{update@{update}!Mgine3D::Camera@{Mgine3D::Camera}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Mgine3\+D\+::\+Camera\+::update (\begin{DoxyParamCaption}\item[{float}]{delta\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the camera\textquotesingle{}s position and rotation based on the elapsed time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+\_\+time} & Time elapsed since the last update. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_mgine3_d_1_1_entity_a8d3a917a38e52c586722f8939eef17e8}{Mgine3\+D\+::\+Entity}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Camera.\+hpp\end{DoxyCompactItemize}

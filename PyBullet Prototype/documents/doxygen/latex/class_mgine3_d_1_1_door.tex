@@ -1,0 +1,137 @@
+\doxysection{Mgine3D\+::Door Class Reference}
+\hypertarget{class_mgine3_d_1_1_door}{}\label{class_mgine3_d_1_1_door}\index{Mgine3D::Door@{Mgine3D::Door}}
+
+
+Represents a \doxylink{class_mgine3_d_1_1_door}{Door} entity in the scene, inheriting from \doxylink{class_mgine3_d_1_1_entity}{Entity} and \doxylink{class_mgine3_d_1_1_message___listener}{Message\+\_\+\+Listener}.  
+
+
+
+
+{\ttfamily \#include $<$Door.\+hpp$>$}
+
+Inheritance diagram for Mgine3D\+::Door\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_mgine3_d_1_1_door}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mgine3_d_1_1_door_a173bde3b3ab39cfcc8de7433ebc65b2c}{Door}} (\mbox{\hyperlink{class_mgine3_d_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*}given\+\_\+scene, bt\+Vector3 given\+\_\+position, bt\+Vector3 given\+\_\+scale)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_mgine3_d_1_1_door}{Door} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mgine3_d_1_1_door_a0a76c4a38504c4afd47c18e1be3999b0}{initialize}} () override
+\begin{DoxyCompactList}\small\item\em Initializes the door, setting up its \doxylink{class_mgine3_d_1_1_bullet}{Bullet} Physics configurations and visuals. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mgine3_d_1_1_door_aba1a1b21455aee72d932f573f9f371a8}{update}} (float delta\+\_\+time) override
+\begin{DoxyCompactList}\small\item\em Checks to see if the door is open to move it out of the way. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mgine3_d_1_1_door_ae3b1c8d3c3c6356da835bfa5f529702d}{handle}} (const \mbox{\hyperlink{struct_mgine3_d_1_1_message}{Message}} \&message) override
+\begin{DoxyCompactList}\small\item\em When the tank interacts with the key it sends a message to open the door. \end{DoxyCompactList}\item 
+\Hypertarget{class_mgine3_d_1_1_door_a9a5dbc4dae016088a79bd7220b8779a0}\label{class_mgine3_d_1_1_door_a9a5dbc4dae016088a79bd7220b8779a0} 
+void {\bfseries open\+\_\+door} ()
+\begin{DoxyCompactList}\small\item\em Sets the flag to true so the update can move the door. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_mgine3_d_1_1_entity}{Mgine3\+D\+::\+Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mgine3_d_1_1_entity_a2075b8be589514975ef1a29ab7c96fda}{Entity}} (\mbox{\hyperlink{class_mgine3_d_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*}given\+\_\+scene)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_mgine3_d_1_1_entity}{Entity} class. \end{DoxyCompactList}\item 
+virtual void {\bfseries render} ()
+\begin{DoxyCompactList}\small\item\em Virtual function to render the entity. It has a base render given that its mostly the same code for everything. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_mgine3_d_1_1_entity}{Mgine3\+D\+::\+Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mgine3_d_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*} {\bfseries scene}
+\begin{DoxyCompactList}\small\item\em Pointer to the parent scene. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ glt\+::\+Node $>$ $>$ {\bfseries models}
+\begin{DoxyCompactList}\small\item\em Vector of Open\+GL Toolkit models associated with the entity. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ bt\+Rigid\+Body $>$ $>$ {\bfseries rigid\+Bodies}
+\begin{DoxyCompactList}\small\item\em Vector of \doxylink{class_mgine3_d_1_1_bullet}{Bullet} rigid bodies associated with the entity. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ bt\+Default\+Motion\+State $>$ $>$ {\bfseries motion\+States}
+\begin{DoxyCompactList}\small\item\em Vector of motion states associated with the entity. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ bt\+Collision\+Shape $>$ $>$ {\bfseries collision\+Shapes}
+\begin{DoxyCompactList}\small\item\em Vector of collision shapes associated with the entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a \doxylink{class_mgine3_d_1_1_door}{Door} entity in the scene, inheriting from \doxylink{class_mgine3_d_1_1_entity}{Entity} and \doxylink{class_mgine3_d_1_1_message___listener}{Message\+\_\+\+Listener}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_mgine3_d_1_1_door_a173bde3b3ab39cfcc8de7433ebc65b2c}\label{class_mgine3_d_1_1_door_a173bde3b3ab39cfcc8de7433ebc65b2c} 
+\index{Mgine3D::Door@{Mgine3D::Door}!Door@{Door}}
+\index{Door@{Door}!Mgine3D::Door@{Mgine3D::Door}}
+\doxysubsubsection{\texorpdfstring{Door()}{Door()}}
+{\footnotesize\ttfamily Mgine3\+D\+::\+Door\+::\+Door (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mgine3_d_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*}}]{given\+\_\+scene,  }\item[{bt\+Vector3}]{given\+\_\+position,  }\item[{bt\+Vector3}]{given\+\_\+scale }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_mgine3_d_1_1_door}{Door} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em given\+\_\+scene} & Pointer to the parent scene. \\
+\hline
+{\em given\+\_\+position} & Position of the door in the scene. \\
+\hline
+{\em given\+\_\+scale} & Scale of the door. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_mgine3_d_1_1_door_ae3b1c8d3c3c6356da835bfa5f529702d}\label{class_mgine3_d_1_1_door_ae3b1c8d3c3c6356da835bfa5f529702d} 
+\index{Mgine3D::Door@{Mgine3D::Door}!handle@{handle}}
+\index{handle@{handle}!Mgine3D::Door@{Mgine3D::Door}}
+\doxysubsubsection{\texorpdfstring{handle()}{handle()}}
+{\footnotesize\ttfamily void Mgine3\+D\+::\+Door\+::handle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_mgine3_d_1_1_message}{Message}} \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+When the tank interacts with the key it sends a message to open the door. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message to handle. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_mgine3_d_1_1_message___listener_a5745115b5b86d371ca66302094f4e12f}{Mgine3\+D\+::\+Message\+\_\+\+Listener}}.
+
+\Hypertarget{class_mgine3_d_1_1_door_a0a76c4a38504c4afd47c18e1be3999b0}\label{class_mgine3_d_1_1_door_a0a76c4a38504c4afd47c18e1be3999b0} 
+\index{Mgine3D::Door@{Mgine3D::Door}!initialize@{initialize}}
+\index{initialize@{initialize}!Mgine3D::Door@{Mgine3D::Door}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void Mgine3\+D\+::\+Door\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initializes the door, setting up its \doxylink{class_mgine3_d_1_1_bullet}{Bullet} Physics configurations and visuals. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_mgine3_d_1_1_entity_a20796bbe0206e7578749ebebf9302a48}{Mgine3\+D\+::\+Entity}}.
+
+\Hypertarget{class_mgine3_d_1_1_door_aba1a1b21455aee72d932f573f9f371a8}\label{class_mgine3_d_1_1_door_aba1a1b21455aee72d932f573f9f371a8} 
+\index{Mgine3D::Door@{Mgine3D::Door}!update@{update}}
+\index{update@{update}!Mgine3D::Door@{Mgine3D::Door}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Mgine3\+D\+::\+Door\+::update (\begin{DoxyParamCaption}\item[{float}]{delta\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks to see if the door is open to move it out of the way. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+\_\+time} & Time elapsed since the last update. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_mgine3_d_1_1_entity_a8d3a917a38e52c586722f8939eef17e8}{Mgine3\+D\+::\+Entity}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Door.\+hpp\end{DoxyCompactItemize}

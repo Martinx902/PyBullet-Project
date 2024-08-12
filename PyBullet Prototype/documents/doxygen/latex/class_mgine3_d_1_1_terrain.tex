@@ -1,0 +1,90 @@
+\doxysection{Mgine3D\+::Terrain Class Reference}
+\hypertarget{class_mgine3_d_1_1_terrain}{}\label{class_mgine3_d_1_1_terrain}\index{Mgine3D::Terrain@{Mgine3D::Terrain}}
+
+
+Represents the \doxylink{class_mgine3_d_1_1_terrain}{Terrain} in the scene, inheriting from \doxylink{class_mgine3_d_1_1_entity}{Entity}.  
+
+
+
+
+{\ttfamily \#include $<$Terrain.\+hpp$>$}
+
+Inheritance diagram for Mgine3D\+::Terrain\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_mgine3_d_1_1_terrain}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mgine3_d_1_1_terrain_a650a7542d730104d905c9f0c0941b766}{Terrain}} (\mbox{\hyperlink{class_mgine3_d_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*}given\+\_\+scene)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_mgine3_d_1_1_terrain}{Terrain} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mgine3_d_1_1_terrain_ac73d296cb39bcd66b079c5a47670ab27}{initialize}} () override
+\begin{DoxyCompactList}\small\item\em Initializes the terrain, setting up its platforms, doors and cubes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_mgine3_d_1_1_entity}{Mgine3\+D\+::\+Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mgine3_d_1_1_entity_a2075b8be589514975ef1a29ab7c96fda}{Entity}} (\mbox{\hyperlink{class_mgine3_d_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*}given\+\_\+scene)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_mgine3_d_1_1_entity}{Entity} class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_mgine3_d_1_1_entity_a8d3a917a38e52c586722f8939eef17e8}{update}} (float delta\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Virtual function to update the entity. \end{DoxyCompactList}\item 
+virtual void {\bfseries render} ()
+\begin{DoxyCompactList}\small\item\em Virtual function to render the entity. It has a base render given that its mostly the same code for everything. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_mgine3_d_1_1_entity}{Mgine3\+D\+::\+Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mgine3_d_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*} {\bfseries scene}
+\begin{DoxyCompactList}\small\item\em Pointer to the parent scene. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ glt\+::\+Node $>$ $>$ {\bfseries models}
+\begin{DoxyCompactList}\small\item\em Vector of Open\+GL Toolkit models associated with the entity. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ bt\+Rigid\+Body $>$ $>$ {\bfseries rigid\+Bodies}
+\begin{DoxyCompactList}\small\item\em Vector of \doxylink{class_mgine3_d_1_1_bullet}{Bullet} rigid bodies associated with the entity. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ bt\+Default\+Motion\+State $>$ $>$ {\bfseries motion\+States}
+\begin{DoxyCompactList}\small\item\em Vector of motion states associated with the entity. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ bt\+Collision\+Shape $>$ $>$ {\bfseries collision\+Shapes}
+\begin{DoxyCompactList}\small\item\em Vector of collision shapes associated with the entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the \doxylink{class_mgine3_d_1_1_terrain}{Terrain} in the scene, inheriting from \doxylink{class_mgine3_d_1_1_entity}{Entity}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_mgine3_d_1_1_terrain_a650a7542d730104d905c9f0c0941b766}\label{class_mgine3_d_1_1_terrain_a650a7542d730104d905c9f0c0941b766} 
+\index{Mgine3D::Terrain@{Mgine3D::Terrain}!Terrain@{Terrain}}
+\index{Terrain@{Terrain}!Mgine3D::Terrain@{Mgine3D::Terrain}}
+\doxysubsubsection{\texorpdfstring{Terrain()}{Terrain()}}
+{\footnotesize\ttfamily Mgine3\+D\+::\+Terrain\+::\+Terrain (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mgine3_d_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*}}]{given\+\_\+scene }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for the \doxylink{class_mgine3_d_1_1_terrain}{Terrain} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em given\+\_\+scene} & Pointer to the parent scene. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_mgine3_d_1_1_terrain_ac73d296cb39bcd66b079c5a47670ab27}\label{class_mgine3_d_1_1_terrain_ac73d296cb39bcd66b079c5a47670ab27} 
+\index{Mgine3D::Terrain@{Mgine3D::Terrain}!initialize@{initialize}}
+\index{initialize@{initialize}!Mgine3D::Terrain@{Mgine3D::Terrain}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void Mgine3\+D\+::\+Terrain\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initializes the terrain, setting up its platforms, doors and cubes. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_mgine3_d_1_1_entity_a20796bbe0206e7578749ebebf9302a48}{Mgine3\+D\+::\+Entity}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Terrain.\+hpp\end{DoxyCompactItemize}

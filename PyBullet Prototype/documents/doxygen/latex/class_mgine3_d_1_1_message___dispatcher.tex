@@ -1,0 +1,64 @@
+\doxysection{Mgine3D\+::Message\+\_\+\+Dispatcher Class Reference}
+\hypertarget{class_mgine3_d_1_1_message___dispatcher}{}\label{class_mgine3_d_1_1_message___dispatcher}\index{Mgine3D::Message\_Dispatcher@{Mgine3D::Message\_Dispatcher}}
+
+
+Dispatches messages to listeners.  
+
+
+
+
+{\ttfamily \#include $<$Message\+\_\+\+Dispatcher.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_mgine3_d_1_1_message___dispatcher_a041daa59c27ccbfdabd882791aad3869}{add}} (\mbox{\hyperlink{class_mgine3_d_1_1_message___listener}{Message\+\_\+\+Listener}} \&listener, const std\+::string \&message\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Adds a message listener for a specific message ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mgine3_d_1_1_message___dispatcher_a7697e41427b4c5c4ba140353f5665f7a}{send}} (const \mbox{\hyperlink{struct_mgine3_d_1_1_message}{Message}} \&message)
+\begin{DoxyCompactList}\small\item\em Sends a message to be dispatched. \end{DoxyCompactList}\item 
+\Hypertarget{class_mgine3_d_1_1_message___dispatcher_a08e545db60c44b725f02bbe58d9c8e55}\label{class_mgine3_d_1_1_message___dispatcher_a08e545db60c44b725f02bbe58d9c8e55} 
+void {\bfseries execute} ()
+\begin{DoxyCompactList}\small\item\em Executes the message dispatcher, dispatching messages to listeners. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Dispatches messages to listeners. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_mgine3_d_1_1_message___dispatcher_a041daa59c27ccbfdabd882791aad3869}\label{class_mgine3_d_1_1_message___dispatcher_a041daa59c27ccbfdabd882791aad3869} 
+\index{Mgine3D::Message\_Dispatcher@{Mgine3D::Message\_Dispatcher}!add@{add}}
+\index{add@{add}!Mgine3D::Message\_Dispatcher@{Mgine3D::Message\_Dispatcher}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void Mgine3\+D\+::\+Message\+\_\+\+Dispatcher\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mgine3_d_1_1_message___listener}{Message\+\_\+\+Listener}} \&}]{listener,  }\item[{const std\+::string \&}]{message\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a message listener for a specific message ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em listener} & The listener object. \\
+\hline
+{\em message\+\_\+id} & The ID of the message to listen for. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_mgine3_d_1_1_message___dispatcher_a7697e41427b4c5c4ba140353f5665f7a}\label{class_mgine3_d_1_1_message___dispatcher_a7697e41427b4c5c4ba140353f5665f7a} 
+\index{Mgine3D::Message\_Dispatcher@{Mgine3D::Message\_Dispatcher}!send@{send}}
+\index{send@{send}!Mgine3D::Message\_Dispatcher@{Mgine3D::Message\_Dispatcher}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily void Mgine3\+D\+::\+Message\+\_\+\+Dispatcher\+::send (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_mgine3_d_1_1_message}{Message}} \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sends a message to be dispatched. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message to be dispatched. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Message\+\_\+\+Dispatcher.\+hpp\end{DoxyCompactItemize}

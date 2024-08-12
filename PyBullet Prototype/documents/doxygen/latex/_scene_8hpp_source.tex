@@ -1,0 +1,108 @@
+\doxysection{Scene.\+hpp}
+\hypertarget{_scene_8hpp_source}{}\label{_scene_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}Entity.hpp"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}Message\_Dispatcher.hpp"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}Message\_Listener.hpp"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}CollisionDispatcher.hpp"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <SFML/Window.hpp>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <Render\_Node.hpp>}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_mgine3_d}{Mgine3D}}}
+\DoxyCodeLine{00026\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_mgine3_d_1_1_scene}{Scene}}}
+\DoxyCodeLine{00031\ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ std::map<std::string,\ std::shared\_ptr<Entity>>\ entities;\ \ \ \ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_mgine3_d_1_1_message___dispatcher}{Message\_Dispatcher}}*\ message\_dispatcher;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_mgine3_d_1_1_collision_dispatcher}{CollisionDispatcher}}*\ customCollisionDispatcher;\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ btDefaultCollisionConfiguration\ \ \ \ \ collisionConfiguration;\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ btCollisionDispatcher\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ collisionDispatcher;\ \ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ btDbvtBroadphase\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ overlappingPairCache;\ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ btSequentialImpulseConstraintSolver\ constrainSolver;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ btDiscreteDynamicsWorld\ \ \ \ \ \ \ \ \ \ \ \ \ dynamicsWorld;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ std::shared\_ptr<glt::Render\_Node>\ render\_node;\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ exit;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ sf::Window*\ window;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_mgine3_d_1_1_scene_a4508af3dfdc3a13fa70d76266b8608a5}{Scene}}(sf::Window*\ given\_window);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mgine3_d_1_1_scene_aae4b8a28e7b80806f4d89adf0da6fc9d}{run}}();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mgine3_d_1_1_scene_abfd0d527f2a12861d69d0197efa1bf01}{add\_entity}}(\textcolor{keyword}{const}\ std::string\&\ \textcolor{keywordtype}{id},\ std::shared\_ptr<Entity>\ entity)}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!entities[\textcolor{keywordtype}{id}])}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ entities[id]\ =\ entity;}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mgine3_d_1_1_scene_a73611ba3af765be82fd603e638f3c954}{add\_message\_listener}}(\mbox{\hyperlink{class_mgine3_d_1_1_message___listener}{Message\_Listener}}\&\ listener,\ \textcolor{keyword}{const}\ std::string\&\ \textcolor{keywordtype}{id})}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ message\_dispatcher-\/>\mbox{\hyperlink{class_mgine3_d_1_1_message___dispatcher_a041daa59c27ccbfdabd882791aad3869}{add}}(listener,\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_mgine3_d_1_1_message___dispatcher}{Message\_Dispatcher}}*\ \mbox{\hyperlink{class_mgine3_d_1_1_scene_a90021399535dc61a43a56a14420e8bc2}{get\_message\_dispatcher}}()}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ message\_dispatcher;}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ std::shared\_ptr<Entity>\ \mbox{\hyperlink{class_mgine3_d_1_1_scene_aa4baed3c0d5b10950673862f0ab19c65}{get\_entity\_by\_id}}(\textcolor{keyword}{const}\ std::string\&\ \textcolor{keywordtype}{id})}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ entities[id];}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ sf::Window*\ \mbox{\hyperlink{class_mgine3_d_1_1_scene_a9a6660434cbf8ae689c39a9a40dafe32}{get\_window}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00114\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ window;}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ sf::Window*\ \mbox{\hyperlink{class_mgine3_d_1_1_scene_a9eb3c5d2197f0aa73a4716a02420773e}{get\_window}}()}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ window;}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ btDiscreteDynamicsWorld*\ \mbox{\hyperlink{class_mgine3_d_1_1_scene_ac8e754cd8eef61d6db250f88d3c55dba}{get\_dynamics\_world}}()}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \&dynamicsWorld;}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ std::shared\_ptr<glt::Render\_Node>\ \mbox{\hyperlink{class_mgine3_d_1_1_scene_a80c48cc5488de95beb97902590966778}{get\_render\_node}}()}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ render\_node;}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_mgine3_d_1_1_scene_a91e46df17a309a43fa7945c2fadbbdcc}{\string~Scene}}();}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ initialize\_scene();}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ process\_events();}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ update\_entities(\textcolor{keywordtype}{float}\ delta\_time);}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ render\_entities();}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ reset\_viewport();}
+\DoxyCodeLine{00182\ \ \ \ \ \};}
+\DoxyCodeLine{00183\ \}}
+
+\end{DoxyCode}

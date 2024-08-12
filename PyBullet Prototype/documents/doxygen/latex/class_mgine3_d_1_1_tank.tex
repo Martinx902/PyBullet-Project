@@ -1,0 +1,144 @@
+\doxysection{Mgine3D\+::Tank Class Reference}
+\hypertarget{class_mgine3_d_1_1_tank}{}\label{class_mgine3_d_1_1_tank}\index{Mgine3D::Tank@{Mgine3D::Tank}}
+
+
+Represents a \doxylink{class_mgine3_d_1_1_tank}{Tank} entity in the scene, inheriting from \doxylink{class_mgine3_d_1_1_entity}{Entity}.  
+
+
+
+
+{\ttfamily \#include $<$Tank.\+hpp$>$}
+
+Inheritance diagram for Mgine3D\+::Tank\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_mgine3_d_1_1_tank}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mgine3_d_1_1_tank_aa2425687ab76c36b849c1d87cc95b915}{Tank}} (\mbox{\hyperlink{class_mgine3_d_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*}given\+\_\+scene, bt\+Vector3 given\+\_\+initial\+\_\+position, float given\+\_\+movement\+\_\+speed, float given\+\_\+aiming\+\_\+speed, float given\+\_\+shoot\+\_\+force)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_mgine3_d_1_1_tank}{Tank} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mgine3_d_1_1_tank_ab91b0e15ddfba00e32c092207d37edd7}{initialize}} () override
+\begin{DoxyCompactList}\small\item\em Initializes the tank, setting up its configurations and visuals. Chasis, Turret and Cannon. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mgine3_d_1_1_tank_ab8a551603f4ecd576daf5b963858de78}{create\+\_\+cube}} (bt\+Scalar \&width, bt\+Scalar \&height, bt\+Scalar \&length, bt\+Vector3 position, const std\+::string \&id, bool dynamic)
+\begin{DoxyCompactList}\small\item\em Creates a cube for the tank\textquotesingle{}s components with a given ID. Basic cube \doxylink{class_mgine3_d_1_1_bullet}{Bullet} py creation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mgine3_d_1_1_tank_a6bf9fbc70c5ab053591c191ce3a5ced1}{update}} (float delta\+\_\+time) override
+\begin{DoxyCompactList}\small\item\em Listen for inputs of the player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_mgine3_d_1_1_entity}{Mgine3\+D\+::\+Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mgine3_d_1_1_entity_a2075b8be589514975ef1a29ab7c96fda}{Entity}} (\mbox{\hyperlink{class_mgine3_d_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*}given\+\_\+scene)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_mgine3_d_1_1_entity}{Entity} class. \end{DoxyCompactList}\item 
+virtual void {\bfseries render} ()
+\begin{DoxyCompactList}\small\item\em Virtual function to render the entity. It has a base render given that its mostly the same code for everything. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_mgine3_d_1_1_entity}{Mgine3\+D\+::\+Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mgine3_d_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*} {\bfseries scene}
+\begin{DoxyCompactList}\small\item\em Pointer to the parent scene. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ glt\+::\+Node $>$ $>$ {\bfseries models}
+\begin{DoxyCompactList}\small\item\em Vector of Open\+GL Toolkit models associated with the entity. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ bt\+Rigid\+Body $>$ $>$ {\bfseries rigid\+Bodies}
+\begin{DoxyCompactList}\small\item\em Vector of \doxylink{class_mgine3_d_1_1_bullet}{Bullet} rigid bodies associated with the entity. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ bt\+Default\+Motion\+State $>$ $>$ {\bfseries motion\+States}
+\begin{DoxyCompactList}\small\item\em Vector of motion states associated with the entity. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ bt\+Collision\+Shape $>$ $>$ {\bfseries collision\+Shapes}
+\begin{DoxyCompactList}\small\item\em Vector of collision shapes associated with the entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a \doxylink{class_mgine3_d_1_1_tank}{Tank} entity in the scene, inheriting from \doxylink{class_mgine3_d_1_1_entity}{Entity}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_mgine3_d_1_1_tank_aa2425687ab76c36b849c1d87cc95b915}\label{class_mgine3_d_1_1_tank_aa2425687ab76c36b849c1d87cc95b915} 
+\index{Mgine3D::Tank@{Mgine3D::Tank}!Tank@{Tank}}
+\index{Tank@{Tank}!Mgine3D::Tank@{Mgine3D::Tank}}
+\doxysubsubsection{\texorpdfstring{Tank()}{Tank()}}
+{\footnotesize\ttfamily Mgine3\+D\+::\+Tank\+::\+Tank (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mgine3_d_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*}}]{given\+\_\+scene,  }\item[{bt\+Vector3}]{given\+\_\+initial\+\_\+position,  }\item[{float}]{given\+\_\+movement\+\_\+speed,  }\item[{float}]{given\+\_\+aiming\+\_\+speed,  }\item[{float}]{given\+\_\+shoot\+\_\+force }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_mgine3_d_1_1_tank}{Tank} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em given\+\_\+scene} & Pointer to the parent scene. \\
+\hline
+{\em given\+\_\+initial\+\_\+position} & Initial position of the tank. \\
+\hline
+{\em given\+\_\+movement\+\_\+speed} & Movement speed of the tank. \\
+\hline
+{\em given\+\_\+aiming\+\_\+speed} & Speed at which the cannon aims. \\
+\hline
+{\em given\+\_\+shoot\+\_\+force} & Force with which the tank shoots. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_mgine3_d_1_1_tank_ab8a551603f4ecd576daf5b963858de78}\label{class_mgine3_d_1_1_tank_ab8a551603f4ecd576daf5b963858de78} 
+\index{Mgine3D::Tank@{Mgine3D::Tank}!create\_cube@{create\_cube}}
+\index{create\_cube@{create\_cube}!Mgine3D::Tank@{Mgine3D::Tank}}
+\doxysubsubsection{\texorpdfstring{create\_cube()}{create\_cube()}}
+{\footnotesize\ttfamily void Mgine3\+D\+::\+Tank\+::create\+\_\+cube (\begin{DoxyParamCaption}\item[{bt\+Scalar \&}]{width,  }\item[{bt\+Scalar \&}]{height,  }\item[{bt\+Scalar \&}]{length,  }\item[{bt\+Vector3}]{position,  }\item[{const std\+::string \&}]{id,  }\item[{bool}]{dynamic }\end{DoxyParamCaption})}
+
+
+
+Creates a cube for the tank\textquotesingle{}s components with a given ID. Basic cube \doxylink{class_mgine3_d_1_1_bullet}{Bullet} py creation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Width of the cube. \\
+\hline
+{\em height} & Height of the cube. \\
+\hline
+{\em length} & Length of the cube. \\
+\hline
+{\em position} & Position of the cube. \\
+\hline
+{\em id} & Identifier for the cube. \\
+\hline
+{\em dynamic} & Whether the cube is dynamic. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_mgine3_d_1_1_tank_ab91b0e15ddfba00e32c092207d37edd7}\label{class_mgine3_d_1_1_tank_ab91b0e15ddfba00e32c092207d37edd7} 
+\index{Mgine3D::Tank@{Mgine3D::Tank}!initialize@{initialize}}
+\index{initialize@{initialize}!Mgine3D::Tank@{Mgine3D::Tank}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void Mgine3\+D\+::\+Tank\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initializes the tank, setting up its configurations and visuals. Chasis, Turret and Cannon. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_mgine3_d_1_1_entity_a20796bbe0206e7578749ebebf9302a48}{Mgine3\+D\+::\+Entity}}.
+
+\Hypertarget{class_mgine3_d_1_1_tank_a6bf9fbc70c5ab053591c191ce3a5ced1}\label{class_mgine3_d_1_1_tank_a6bf9fbc70c5ab053591c191ce3a5ced1} 
+\index{Mgine3D::Tank@{Mgine3D::Tank}!update@{update}}
+\index{update@{update}!Mgine3D::Tank@{Mgine3D::Tank}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Mgine3\+D\+::\+Tank\+::update (\begin{DoxyParamCaption}\item[{float}]{delta\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Listen for inputs of the player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+\_\+time} & Time elapsed since the last update. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_mgine3_d_1_1_entity_a8d3a917a38e52c586722f8939eef17e8}{Mgine3\+D\+::\+Entity}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Tank.\+hpp\end{DoxyCompactItemize}

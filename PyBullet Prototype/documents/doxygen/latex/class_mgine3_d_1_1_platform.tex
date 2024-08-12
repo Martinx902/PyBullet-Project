@@ -1,0 +1,117 @@
+\doxysection{Mgine3D\+::Platform Class Reference}
+\hypertarget{class_mgine3_d_1_1_platform}{}\label{class_mgine3_d_1_1_platform}\index{Mgine3D::Platform@{Mgine3D::Platform}}
+
+
+Represents a moving \doxylink{class_mgine3_d_1_1_platform}{Platform} entity in the scene, inheriting from \doxylink{class_mgine3_d_1_1_entity}{Entity}.  
+
+
+
+
+{\ttfamily \#include $<$Platform.\+hpp$>$}
+
+Inheritance diagram for Mgine3D\+::Platform\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_mgine3_d_1_1_platform}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mgine3_d_1_1_platform_a038f688c0e0ca7b6e868d797019afb61}{Platform}} (\mbox{\hyperlink{class_mgine3_d_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*}given\+\_\+scene, bt\+Vector3 given\+\_\+position, bt\+Vector3 given\+\_\+final\+\_\+position, bt\+Vector3 given\+\_\+scale, bt\+Scalar given\+\_\+platform\+\_\+speed)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_mgine3_d_1_1_platform}{Platform} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mgine3_d_1_1_platform_a93b9669bf318effca9f408422adda8cc}{initialize}} () override
+\begin{DoxyCompactList}\small\item\em Initializes the platform, setting up its configurations and visuals. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mgine3_d_1_1_platform_a594e495ca4bc9eb62cf818d64c5436e1}{update}} (float delta\+\_\+time) override
+\begin{DoxyCompactList}\small\item\em Updates the platform\textquotesingle{}s position based on the elapsed time going the initial X position to the final X positions back and force. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_mgine3_d_1_1_entity}{Mgine3\+D\+::\+Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mgine3_d_1_1_entity_a2075b8be589514975ef1a29ab7c96fda}{Entity}} (\mbox{\hyperlink{class_mgine3_d_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*}given\+\_\+scene)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_mgine3_d_1_1_entity}{Entity} class. \end{DoxyCompactList}\item 
+virtual void {\bfseries render} ()
+\begin{DoxyCompactList}\small\item\em Virtual function to render the entity. It has a base render given that its mostly the same code for everything. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_mgine3_d_1_1_entity}{Mgine3\+D\+::\+Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mgine3_d_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*} {\bfseries scene}
+\begin{DoxyCompactList}\small\item\em Pointer to the parent scene. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ glt\+::\+Node $>$ $>$ {\bfseries models}
+\begin{DoxyCompactList}\small\item\em Vector of Open\+GL Toolkit models associated with the entity. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ bt\+Rigid\+Body $>$ $>$ {\bfseries rigid\+Bodies}
+\begin{DoxyCompactList}\small\item\em Vector of \doxylink{class_mgine3_d_1_1_bullet}{Bullet} rigid bodies associated with the entity. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ bt\+Default\+Motion\+State $>$ $>$ {\bfseries motion\+States}
+\begin{DoxyCompactList}\small\item\em Vector of motion states associated with the entity. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ bt\+Collision\+Shape $>$ $>$ {\bfseries collision\+Shapes}
+\begin{DoxyCompactList}\small\item\em Vector of collision shapes associated with the entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a moving \doxylink{class_mgine3_d_1_1_platform}{Platform} entity in the scene, inheriting from \doxylink{class_mgine3_d_1_1_entity}{Entity}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_mgine3_d_1_1_platform_a038f688c0e0ca7b6e868d797019afb61}\label{class_mgine3_d_1_1_platform_a038f688c0e0ca7b6e868d797019afb61} 
+\index{Mgine3D::Platform@{Mgine3D::Platform}!Platform@{Platform}}
+\index{Platform@{Platform}!Mgine3D::Platform@{Mgine3D::Platform}}
+\doxysubsubsection{\texorpdfstring{Platform()}{Platform()}}
+{\footnotesize\ttfamily Mgine3\+D\+::\+Platform\+::\+Platform (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mgine3_d_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*}}]{given\+\_\+scene,  }\item[{bt\+Vector3}]{given\+\_\+position,  }\item[{bt\+Vector3}]{given\+\_\+final\+\_\+position,  }\item[{bt\+Vector3}]{given\+\_\+scale,  }\item[{bt\+Scalar}]{given\+\_\+platform\+\_\+speed }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_mgine3_d_1_1_platform}{Platform} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em given\+\_\+scene} & Pointer to the parent scene. \\
+\hline
+{\em given\+\_\+position} & Initial position of the platform. \\
+\hline
+{\em given\+\_\+final\+\_\+position} & Final position of the platform. \\
+\hline
+{\em given\+\_\+scale} & Scale of the platform. \\
+\hline
+{\em given\+\_\+platform\+\_\+speed} & Speed at which the platform moves. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_mgine3_d_1_1_platform_a93b9669bf318effca9f408422adda8cc}\label{class_mgine3_d_1_1_platform_a93b9669bf318effca9f408422adda8cc} 
+\index{Mgine3D::Platform@{Mgine3D::Platform}!initialize@{initialize}}
+\index{initialize@{initialize}!Mgine3D::Platform@{Mgine3D::Platform}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void Mgine3\+D\+::\+Platform\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initializes the platform, setting up its configurations and visuals. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_mgine3_d_1_1_entity_a20796bbe0206e7578749ebebf9302a48}{Mgine3\+D\+::\+Entity}}.
+
+\Hypertarget{class_mgine3_d_1_1_platform_a594e495ca4bc9eb62cf818d64c5436e1}\label{class_mgine3_d_1_1_platform_a594e495ca4bc9eb62cf818d64c5436e1} 
+\index{Mgine3D::Platform@{Mgine3D::Platform}!update@{update}}
+\index{update@{update}!Mgine3D::Platform@{Mgine3D::Platform}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Mgine3\+D\+::\+Platform\+::update (\begin{DoxyParamCaption}\item[{float}]{delta\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the platform\textquotesingle{}s position based on the elapsed time going the initial X position to the final X positions back and force. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+\_\+time} & Time elapsed since the last update. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_mgine3_d_1_1_entity_a8d3a917a38e52c586722f8939eef17e8}{Mgine3\+D\+::\+Entity}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Platform.\+hpp\end{DoxyCompactItemize}

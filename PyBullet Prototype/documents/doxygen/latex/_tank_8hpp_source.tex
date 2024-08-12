@@ -1,0 +1,54 @@
+\doxysection{Tank.\+hpp}
+\hypertarget{_tank_8hpp_source}{}\label{_tank_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}Entity.hpp"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_mgine3_d}{Mgine3D}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_mgine3_d_1_1_tank}{Tank}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_mgine3_d_1_1_entity}{Entity}}}
+\DoxyCodeLine{00017\ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ btVector3\ initial\_position;\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ movement\_speed;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ aiming\_speed;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ shoot\_force;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<btHingeConstraint>>\ wheel\_constraints;\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<btHingeConstraint>>\ cannon\_constraints;\ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ rb[0]\ =\ chassis}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ rb[1]\ =\ turret}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ rb[2]\ =\ cannon}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ rb[3]\ =\ right\ wheel}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ rb[4]\ =\ left\ wheel}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ cannon\_constraints[0]\ =\ turret\ (union\ with\ the\ chassis)}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ cannon\_constraints[1]\ =\ cannon\ (union\ with\ the\ turret)}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ wheel\_constraints[0]\ =\ right\ wheel\ (union\ with\ the\ chassis)}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ wheel\_constraints[1]\ =\ left\ wheel\ (union\ with\ the\ chassis)}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_mgine3_d_1_1_tank_aa2425687ab76c36b849c1d87cc95b915}{Tank}}(\mbox{\hyperlink{class_mgine3_d_1_1_scene}{Scene}}*\ given\_scene,\ btVector3\ given\_initial\_position,\ \textcolor{keywordtype}{float}\ given\_movement\_speed,\ \textcolor{keywordtype}{float}\ given\_aiming\_speed,\ \textcolor{keywordtype}{float}\ given\_shoot\_force);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mgine3_d_1_1_tank_ab91b0e15ddfba00e32c092207d37edd7}{initialize}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mgine3_d_1_1_tank_ab8a551603f4ecd576daf5b963858de78}{create\_cube}}(btScalar\&\ width,\ btScalar\&\ height,\ btScalar\&\ length,\ btVector3\ position,\ \textcolor{keyword}{const}\ std::string\&\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{bool}\ dynamic);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mgine3_d_1_1_tank_a6bf9fbc70c5ab053591c191ce3a5ced1}{update}}(\textcolor{keywordtype}{float}\ delta\_time)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ aim\_cannon\_horizontal(\textcolor{keywordtype}{int}\ direction);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ aim\_cannon\_vertical(\textcolor{keywordtype}{int}\ direction);}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ shoot();}
+\DoxyCodeLine{00096\ \ \ \ \ \};}
+\DoxyCodeLine{00097\ \}}
+
+\end{DoxyCode}

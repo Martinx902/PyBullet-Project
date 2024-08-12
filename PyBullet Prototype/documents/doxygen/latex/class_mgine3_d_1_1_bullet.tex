@@ -1,0 +1,104 @@
+\doxysection{Mgine3D\+::Bullet Class Reference}
+\hypertarget{class_mgine3_d_1_1_bullet}{}\label{class_mgine3_d_1_1_bullet}\index{Mgine3D::Bullet@{Mgine3D::Bullet}}
+
+
+Represents a dynamic rigidbody impulsed with a force in the scene, inheriting from \doxylink{class_mgine3_d_1_1_entity}{Entity}.  
+
+
+
+
+{\ttfamily \#include $<$Bullet.\+hpp$>$}
+
+Inheritance diagram for Mgine3D\+::Bullet\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_mgine3_d_1_1_bullet}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mgine3_d_1_1_bullet_ade6d7f40a036d5a0ae40d0442294464e}{Bullet}} (\mbox{\hyperlink{class_mgine3_d_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*}given\+\_\+scene, float given\+\_\+shoot\+\_\+force, bt\+Vector3 given\+\_\+shoot\+\_\+position, int given\+\_\+bullet\+\_\+id, bt\+Vector3 given\+\_\+cannon\+\_\+position)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_mgine3_d_1_1_bullet}{Bullet} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mgine3_d_1_1_bullet_a3ed38da8138e1c639d6853e46b165276}{update}} (float delta\+\_\+time) override
+\begin{DoxyCompactList}\small\item\em Checks the life span of the bullet and sees if its out of time to destroy it so it doesnt consume more memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_mgine3_d_1_1_entity}{Mgine3\+D\+::\+Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mgine3_d_1_1_entity_a2075b8be589514975ef1a29ab7c96fda}{Entity}} (\mbox{\hyperlink{class_mgine3_d_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*}given\+\_\+scene)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_mgine3_d_1_1_entity}{Entity} class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_mgine3_d_1_1_entity_a20796bbe0206e7578749ebebf9302a48}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Virtual function to initialize the entity. \end{DoxyCompactList}\item 
+virtual void {\bfseries render} ()
+\begin{DoxyCompactList}\small\item\em Virtual function to render the entity. It has a base render given that its mostly the same code for everything. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_mgine3_d_1_1_entity}{Mgine3\+D\+::\+Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mgine3_d_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*} {\bfseries scene}
+\begin{DoxyCompactList}\small\item\em Pointer to the parent scene. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ glt\+::\+Node $>$ $>$ {\bfseries models}
+\begin{DoxyCompactList}\small\item\em Vector of Open\+GL Toolkit models associated with the entity. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ bt\+Rigid\+Body $>$ $>$ {\bfseries rigid\+Bodies}
+\begin{DoxyCompactList}\small\item\em Vector of \doxylink{class_mgine3_d_1_1_bullet}{Bullet} rigid bodies associated with the entity. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ bt\+Default\+Motion\+State $>$ $>$ {\bfseries motion\+States}
+\begin{DoxyCompactList}\small\item\em Vector of motion states associated with the entity. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ bt\+Collision\+Shape $>$ $>$ {\bfseries collision\+Shapes}
+\begin{DoxyCompactList}\small\item\em Vector of collision shapes associated with the entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a dynamic rigidbody impulsed with a force in the scene, inheriting from \doxylink{class_mgine3_d_1_1_entity}{Entity}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_mgine3_d_1_1_bullet_ade6d7f40a036d5a0ae40d0442294464e}\label{class_mgine3_d_1_1_bullet_ade6d7f40a036d5a0ae40d0442294464e} 
+\index{Mgine3D::Bullet@{Mgine3D::Bullet}!Bullet@{Bullet}}
+\index{Bullet@{Bullet}!Mgine3D::Bullet@{Mgine3D::Bullet}}
+\doxysubsubsection{\texorpdfstring{Bullet()}{Bullet()}}
+{\footnotesize\ttfamily Mgine3\+D\+::\+Bullet\+::\+Bullet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mgine3_d_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*}}]{given\+\_\+scene,  }\item[{float}]{given\+\_\+shoot\+\_\+force,  }\item[{bt\+Vector3}]{given\+\_\+shoot\+\_\+position,  }\item[{int}]{given\+\_\+bullet\+\_\+id,  }\item[{bt\+Vector3}]{given\+\_\+cannon\+\_\+position }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_mgine3_d_1_1_bullet}{Bullet} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em given\+\_\+scene} & Pointer to the parent scene. \\
+\hline
+{\em given\+\_\+shoot\+\_\+force} & Force with which the bullet is shot. \\
+\hline
+{\em given\+\_\+shoot\+\_\+position} & Position from where the bullet is shot. \\
+\hline
+{\em given\+\_\+bullet\+\_\+id} & Unique identifier for the bullet. \\
+\hline
+{\em given\+\_\+cannon\+\_\+position} & Position of the cannon that shot the bullet. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_mgine3_d_1_1_bullet_a3ed38da8138e1c639d6853e46b165276}\label{class_mgine3_d_1_1_bullet_a3ed38da8138e1c639d6853e46b165276} 
+\index{Mgine3D::Bullet@{Mgine3D::Bullet}!update@{update}}
+\index{update@{update}!Mgine3D::Bullet@{Mgine3D::Bullet}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Mgine3\+D\+::\+Bullet\+::update (\begin{DoxyParamCaption}\item[{float}]{delta\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks the life span of the bullet and sees if its out of time to destroy it so it doesnt consume more memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+\_\+time} & Time elapsed since the last update. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_mgine3_d_1_1_entity_a8d3a917a38e52c586722f8939eef17e8}{Mgine3\+D\+::\+Entity}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Bullet.\+hpp\item 
+Bullet.\+cpp\end{DoxyCompactItemize}

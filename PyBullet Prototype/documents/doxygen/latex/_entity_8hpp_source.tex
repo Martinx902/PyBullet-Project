@@ -1,0 +1,40 @@
+\doxysection{Entity.\+hpp}
+\hypertarget{_entity_8hpp_source}{}\label{_entity_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <Node.hpp>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <btBulletDynamicsCommon.h>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_mgine3_d}{Mgine3D}}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{class\ }Scene;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_mgine3_d_1_1_entity}{Entity}}}
+\DoxyCodeLine{00023\ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_mgine3_d_1_1_scene}{Scene}}*\ \mbox{\hyperlink{class_mgine3_d_1_1_entity_a6cf9c65cd8ccc0b1e6f67c0f36146cda}{scene}};\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<glt::Node>>\ \mbox{\hyperlink{class_mgine3_d_1_1_entity_a2130db2befe6fc85f1a2f50257eba712}{models}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<btRigidBody>>\ \mbox{\hyperlink{class_mgine3_d_1_1_entity_aa0bd651bf0ff248430c8135ca101cff5}{rigidBodies}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<btDefaultMotionState>>\ \mbox{\hyperlink{class_mgine3_d_1_1_entity_a2c938a1abc70e9e6db8ac0c1dba1a1a6}{motionStates}};\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<btCollisionShape>>\ \mbox{\hyperlink{class_mgine3_d_1_1_entity_a589196d81af58f245285aa626fb613a9}{collisionShapes}};\ \ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_mgine3_d_1_1_entity_a2075b8be589514975ef1a29ab7c96fda}{Entity}}(\mbox{\hyperlink{class_mgine3_d_1_1_scene}{Scene}}*\ given\_scene)\ :\ \mbox{\hyperlink{class_mgine3_d_1_1_entity_a6cf9c65cd8ccc0b1e6f67c0f36146cda}{scene}}(given\_scene)\ \{\}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mgine3_d_1_1_entity_a20796bbe0206e7578749ebebf9302a48}{initialize}}()\ \{\}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mgine3_d_1_1_entity_a8d3a917a38e52c586722f8939eef17e8}{update}}(\textcolor{keywordtype}{float}\ delta\_time)\ \{\}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mgine3_d_1_1_entity_a60e98b5a2dc7f965f886164da3407205}{render}}();}
+\DoxyCodeLine{00058\ \ \ \ \ \};}
+\DoxyCodeLine{00059\ \}}
+
+\end{DoxyCode}

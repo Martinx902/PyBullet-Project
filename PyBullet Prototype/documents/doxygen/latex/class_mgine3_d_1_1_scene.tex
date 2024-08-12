@@ -1,0 +1,184 @@
+\doxysection{Mgine3D\+::Scene Class Reference}
+\hypertarget{class_mgine3_d_1_1_scene}{}\label{class_mgine3_d_1_1_scene}\index{Mgine3D::Scene@{Mgine3D::Scene}}
+
+
+Represents a \doxylink{class_mgine3_d_1_1_scene}{Scene} in the application, managing entities, physics simulation, and rendering.  
+
+
+
+
+{\ttfamily \#include $<$Scene.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mgine3_d_1_1_scene_a4508af3dfdc3a13fa70d76266b8608a5}{Scene}} (sf\+::\+Window \texorpdfstring{$\ast$}{*}given\+\_\+window)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_mgine3_d_1_1_scene}{Scene} class. \end{DoxyCompactList}\item 
+\Hypertarget{class_mgine3_d_1_1_scene_aae4b8a28e7b80806f4d89adf0da6fc9d}\label{class_mgine3_d_1_1_scene_aae4b8a28e7b80806f4d89adf0da6fc9d} 
+void {\bfseries run} ()
+\begin{DoxyCompactList}\small\item\em Runs the main loop of the scene, updating, rendering, and simulating physics. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mgine3_d_1_1_scene_abfd0d527f2a12861d69d0197efa1bf01}{add\+\_\+entity}} (const std\+::string \&id, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_mgine3_d_1_1_entity}{Entity}} $>$ entity)
+\begin{DoxyCompactList}\small\item\em Adds an entity to the scene. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mgine3_d_1_1_scene_a73611ba3af765be82fd603e638f3c954}{add\+\_\+message\+\_\+listener}} (\mbox{\hyperlink{class_mgine3_d_1_1_message___listener}{Message\+\_\+\+Listener}} \&listener, const std\+::string \&id)
+\begin{DoxyCompactList}\small\item\em Adds a message listener to the message dispatcher. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_mgine3_d_1_1_message___dispatcher}{Message\+\_\+\+Dispatcher}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_mgine3_d_1_1_scene_a90021399535dc61a43a56a14420e8bc2}{get\+\_\+message\+\_\+dispatcher}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the message dispatcher. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_mgine3_d_1_1_entity}{Entity}} $>$ \mbox{\hyperlink{class_mgine3_d_1_1_scene_aa4baed3c0d5b10950673862f0ab19c65}{get\+\_\+entity\+\_\+by\+\_\+id}} (const std\+::string \&id)
+\begin{DoxyCompactList}\small\item\em Retrieves an entity from the scene by its ID. \end{DoxyCompactList}\item 
+const sf\+::\+Window \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_mgine3_d_1_1_scene_a9a6660434cbf8ae689c39a9a40dafe32}{get\+\_\+window}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves a pointer to the SFML render window. \end{DoxyCompactList}\item 
+sf\+::\+Window \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_mgine3_d_1_1_scene_a9eb3c5d2197f0aa73a4716a02420773e}{get\+\_\+window}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves a pointer to the SFML render window. \end{DoxyCompactList}\item 
+bt\+Discrete\+Dynamics\+World \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_mgine3_d_1_1_scene_ac8e754cd8eef61d6db250f88d3c55dba}{get\+\_\+dynamics\+\_\+world}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves a pointer to the dynamics world. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ glt\+::\+Render\+\_\+\+Node $>$ \mbox{\hyperlink{class_mgine3_d_1_1_scene_a80c48cc5488de95beb97902590966778}{get\+\_\+render\+\_\+node}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves a pointer to the render node. \end{DoxyCompactList}\item 
+\Hypertarget{class_mgine3_d_1_1_scene_a91e46df17a309a43fa7945c2fadbbdcc}\label{class_mgine3_d_1_1_scene_a91e46df17a309a43fa7945c2fadbbdcc} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Scene} ()
+\begin{DoxyCompactList}\small\item\em Destroys the new pointers created at the constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a \doxylink{class_mgine3_d_1_1_scene}{Scene} in the application, managing entities, physics simulation, and rendering. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_mgine3_d_1_1_scene_a4508af3dfdc3a13fa70d76266b8608a5}\label{class_mgine3_d_1_1_scene_a4508af3dfdc3a13fa70d76266b8608a5} 
+\index{Mgine3D::Scene@{Mgine3D::Scene}!Scene@{Scene}}
+\index{Scene@{Scene}!Mgine3D::Scene@{Mgine3D::Scene}}
+\doxysubsubsection{\texorpdfstring{Scene()}{Scene()}}
+{\footnotesize\ttfamily Mgine3\+D\+::\+Scene\+::\+Scene (\begin{DoxyParamCaption}\item[{sf\+::\+Window \texorpdfstring{$\ast$}{*}}]{given\+\_\+window }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_mgine3_d_1_1_scene}{Scene} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em given\+\_\+window} & Pointer to the SFML render window. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_mgine3_d_1_1_scene_abfd0d527f2a12861d69d0197efa1bf01}\label{class_mgine3_d_1_1_scene_abfd0d527f2a12861d69d0197efa1bf01} 
+\index{Mgine3D::Scene@{Mgine3D::Scene}!add\_entity@{add\_entity}}
+\index{add\_entity@{add\_entity}!Mgine3D::Scene@{Mgine3D::Scene}}
+\doxysubsubsection{\texorpdfstring{add\_entity()}{add\_entity()}}
+{\footnotesize\ttfamily void Mgine3\+D\+::\+Scene\+::add\+\_\+entity (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_mgine3_d_1_1_entity}{Entity}} $>$}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds an entity to the scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & ID of the entity. \\
+\hline
+{\em entity} & Pointer to the entity object. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_mgine3_d_1_1_scene_a73611ba3af765be82fd603e638f3c954}\label{class_mgine3_d_1_1_scene_a73611ba3af765be82fd603e638f3c954} 
+\index{Mgine3D::Scene@{Mgine3D::Scene}!add\_message\_listener@{add\_message\_listener}}
+\index{add\_message\_listener@{add\_message\_listener}!Mgine3D::Scene@{Mgine3D::Scene}}
+\doxysubsubsection{\texorpdfstring{add\_message\_listener()}{add\_message\_listener()}}
+{\footnotesize\ttfamily void Mgine3\+D\+::\+Scene\+::add\+\_\+message\+\_\+listener (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mgine3_d_1_1_message___listener}{Message\+\_\+\+Listener}} \&}]{listener,  }\item[{const std\+::string \&}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a message listener to the message dispatcher. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em listener} & Reference to the listener object. \\
+\hline
+{\em id} & ID of the message to listen for. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_mgine3_d_1_1_scene_ac8e754cd8eef61d6db250f88d3c55dba}\label{class_mgine3_d_1_1_scene_ac8e754cd8eef61d6db250f88d3c55dba} 
+\index{Mgine3D::Scene@{Mgine3D::Scene}!get\_dynamics\_world@{get\_dynamics\_world}}
+\index{get\_dynamics\_world@{get\_dynamics\_world}!Mgine3D::Scene@{Mgine3D::Scene}}
+\doxysubsubsection{\texorpdfstring{get\_dynamics\_world()}{get\_dynamics\_world()}}
+{\footnotesize\ttfamily bt\+Discrete\+Dynamics\+World \texorpdfstring{$\ast$}{*} Mgine3\+D\+::\+Scene\+::get\+\_\+dynamics\+\_\+world (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves a pointer to the dynamics world. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the dynamics world. 
+\end{DoxyReturn}
+\Hypertarget{class_mgine3_d_1_1_scene_aa4baed3c0d5b10950673862f0ab19c65}\label{class_mgine3_d_1_1_scene_aa4baed3c0d5b10950673862f0ab19c65} 
+\index{Mgine3D::Scene@{Mgine3D::Scene}!get\_entity\_by\_id@{get\_entity\_by\_id}}
+\index{get\_entity\_by\_id@{get\_entity\_by\_id}!Mgine3D::Scene@{Mgine3D::Scene}}
+\doxysubsubsection{\texorpdfstring{get\_entity\_by\_id()}{get\_entity\_by\_id()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_mgine3_d_1_1_entity}{Entity}} $>$ Mgine3\+D\+::\+Scene\+::get\+\_\+entity\+\_\+by\+\_\+id (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves an entity from the scene by its ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & ID of the entity to retrieve. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the entity if found, nullptr otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_mgine3_d_1_1_scene_a90021399535dc61a43a56a14420e8bc2}\label{class_mgine3_d_1_1_scene_a90021399535dc61a43a56a14420e8bc2} 
+\index{Mgine3D::Scene@{Mgine3D::Scene}!get\_message\_dispatcher@{get\_message\_dispatcher}}
+\index{get\_message\_dispatcher@{get\_message\_dispatcher}!Mgine3D::Scene@{Mgine3D::Scene}}
+\doxysubsubsection{\texorpdfstring{get\_message\_dispatcher()}{get\_message\_dispatcher()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_mgine3_d_1_1_message___dispatcher}{Message\+\_\+\+Dispatcher}} \texorpdfstring{$\ast$}{*} Mgine3\+D\+::\+Scene\+::get\+\_\+message\+\_\+dispatcher (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the message dispatcher. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the message dispatcher. 
+\end{DoxyReturn}
+\Hypertarget{class_mgine3_d_1_1_scene_a80c48cc5488de95beb97902590966778}\label{class_mgine3_d_1_1_scene_a80c48cc5488de95beb97902590966778} 
+\index{Mgine3D::Scene@{Mgine3D::Scene}!get\_render\_node@{get\_render\_node}}
+\index{get\_render\_node@{get\_render\_node}!Mgine3D::Scene@{Mgine3D::Scene}}
+\doxysubsubsection{\texorpdfstring{get\_render\_node()}{get\_render\_node()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ glt\+::\+Render\+\_\+\+Node $>$ Mgine3\+D\+::\+Scene\+::get\+\_\+render\+\_\+node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves a pointer to the render node. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the render node. 
+\end{DoxyReturn}
+\Hypertarget{class_mgine3_d_1_1_scene_a9eb3c5d2197f0aa73a4716a02420773e}\label{class_mgine3_d_1_1_scene_a9eb3c5d2197f0aa73a4716a02420773e} 
+\index{Mgine3D::Scene@{Mgine3D::Scene}!get\_window@{get\_window}}
+\index{get\_window@{get\_window}!Mgine3D::Scene@{Mgine3D::Scene}}
+\doxysubsubsection{\texorpdfstring{get\_window()}{get\_window()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily sf\+::\+Window \texorpdfstring{$\ast$}{*} Mgine3\+D\+::\+Scene\+::get\+\_\+window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves a pointer to the SFML render window. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the render window. 
+\end{DoxyReturn}
+\Hypertarget{class_mgine3_d_1_1_scene_a9a6660434cbf8ae689c39a9a40dafe32}\label{class_mgine3_d_1_1_scene_a9a6660434cbf8ae689c39a9a40dafe32} 
+\index{Mgine3D::Scene@{Mgine3D::Scene}!get\_window@{get\_window}}
+\index{get\_window@{get\_window}!Mgine3D::Scene@{Mgine3D::Scene}}
+\doxysubsubsection{\texorpdfstring{get\_window()}{get\_window()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const sf\+::\+Window \texorpdfstring{$\ast$}{*} Mgine3\+D\+::\+Scene\+::get\+\_\+window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves a pointer to the SFML render window. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the render window. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Scene.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\code\sources\CollisionDispatcher.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\main.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\Message_Dispatcher.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\Scene.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\headers\Bullet.cpp">
+      <Filter>Sources\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\Door.cpp">
+      <Filter>Sources\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\Entity.cpp">
+      <Filter>Sources\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\Key.cpp">
+      <Filter>Sources\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\Platform.cpp">
+      <Filter>Sources\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\Tank.cpp">
+      <Filter>Sources\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\Terrain.cpp">
+      <Filter>Sources\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\Camera.cpp">
+      <Filter>Sources\Entities</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\code\headers\CollisionDispatcher.hpp">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\CollsionsID.hpp">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\sources\main.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Scene.hpp">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Bullet.hpp">
+      <Filter>Headers\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Camera.hpp">
+      <Filter>Headers\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Door.hpp">
+      <Filter>Headers\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Entity.hpp">
+      <Filter>Headers\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Key.hpp">
+      <Filter>Headers\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Platform.hpp">
+      <Filter>Headers\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Tank.hpp">
+      <Filter>Headers\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Terrain.hpp">
+      <Filter>Headers\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Message_Dispatcher.hpp">
+      <Filter>Headers\Message System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Message_Listener.hpp">
+      <Filter>Headers\Message System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Message.hpp">
+      <Filter>Headers\Message System</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{f1415f8d-d7ad-4ab1-9426-6708345cd4e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources">
+      <UniqueIdentifier>{c9fc8a18-528b-4e65-b6e8-be0166a0cea4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Entities">
+      <UniqueIdentifier>{ead4522d-3292-448e-b3fb-e2cf1a097bc5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Message System">
+      <UniqueIdentifier>{ebf3d89a-62b6-4ecc-a3b0-9f5c2cd02b31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Entities">
+      <UniqueIdentifier>{d8dae09f-cd88-4c43-94b2-ec1de3d0cfcf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
